@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: greeting-service
+
+greeting-service:
+  greeting: "Cia"
+  defaultValue: "Mondo"
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
