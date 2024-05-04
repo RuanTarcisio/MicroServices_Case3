@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: cambio-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cambio-ms
+    username: postgres
+    password: senh@BD
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    open-in-view: true
+    properties:
+      hibernate.format_sql: true
+
+  flyway:
+    locations: classpath:migration
+    baselineOnMigrate: true
+    placeholderReplacement: true
+    baselineVersion: 1
+    encoding: UTF-8
+ 
+ 
+server:
+  port: 8000
